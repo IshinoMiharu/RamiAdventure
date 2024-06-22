@@ -8963,6 +8963,11 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!50 &1855158845 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5392883121688197606, guid: dd3c7e8983f795d4aa48809564af8365, type: 3}
+  m_PrefabInstance: {fileID: 1221367825400453133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861110778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10347,6 +10352,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7537496684833803584, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
+      propertyPath: r_object
+      value: 
+      objectReference: {fileID: 1855158845}
     - target: {fileID: 7710521980294456547, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.07
@@ -10387,6 +10396,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8149171971960271316, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: a2ac46c21d1f1f044b2e51b0d77a4c37, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

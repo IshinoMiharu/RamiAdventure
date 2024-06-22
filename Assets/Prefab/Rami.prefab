@@ -108,7 +108,7 @@ MonoBehaviour:
   m_movePower: 3
   m_jumpPower: 4
   m_flipX: 1
-  Zerima: {fileID: 0}
+  Zerima: {fileID: 167894552758094120, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
   RidePoint: {fileID: 4869739344114849650}
   ExetPoint: {fileID: 2363924156472771858}
   muki: 0
@@ -256,7 +256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: 0.6}
+  m_Offset: {x: 0.01, y: 0.59}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -267,7 +267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.08}
+  m_Size: {x: 0.34, y: 0.31}
   m_EdgeRadius: 0
 --- !u!1 &2363924156472771858
 GameObject:
@@ -375,7 +375,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 1}
+  m_Size: {x: 0.11, y: 1}
   m_EdgeRadius: 0.08
 --- !u!1 &4869739344114849650
 GameObject:

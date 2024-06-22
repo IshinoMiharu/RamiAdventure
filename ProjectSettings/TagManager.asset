@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Zerima
   - Shot
+  - enemy
   layers:
   - Default
   - TransparentFX

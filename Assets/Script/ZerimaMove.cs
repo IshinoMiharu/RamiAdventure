@@ -11,6 +11,7 @@ public class ZerimaMove : MonoBehaviour
     [SerializeField] float m_jumpPower = 5f;
     /// <summary>入力に応じて左右を反転させるかどうかのフラグ</summary>
     [SerializeField] bool m_flipX = false;
+    [SerializeField] Rigidbody2D r_object;
     Rigidbody2D m_rb = default;
     SpriteRenderer m_sprite = default;
     /// <summary>m_colors に使う添字</summary>
@@ -25,7 +26,7 @@ public class ZerimaMove : MonoBehaviour
 
     public Transform groundCheck;   // 接地を検知するためのオブジェクト
     public LayerMask groundLayer;   // 地面と判定するレイヤー
-    GameObject r_object;
+    
 
     private Rigidbody2D rb;
 
@@ -38,7 +39,6 @@ public class ZerimaMove : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody2D>();
         m_sprite = GetComponent<SpriteRenderer>();
-        r_object = GameObject.Find("Zerima");
         animator = GetComponent<Animator>();
     }
 
@@ -106,8 +106,7 @@ public class ZerimaMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && BigJump)
         {
             Debug.Log("大ジャンプ！");
-            Rigidbody2D r_rb = r_object.GetComponent<Rigidbody2D>();
-            r_rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+            r_object.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
             BigJump = false;
         }
     }
@@ -116,8 +115,6 @@ public class ZerimaMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-
-            Debug.Log("touch！");
             BigJump = true;
         }
     }
@@ -128,8 +125,6 @@ public class ZerimaMove : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-
-            Debug.Log("touch！");
             BigJump = false;
         }
 

@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2188b525501e144a665471d1754bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectA: {fileID: 0}
-  objectB: {fileID: 0}
+  objectA: {fileID: 2046497717813831909, guid: dd3c7e8983f795d4aa48809564af8365, type: 3}
+  objectB: {fileID: 7710521980294456547, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
