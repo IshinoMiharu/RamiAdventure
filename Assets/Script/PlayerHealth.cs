@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    //[SerializeField]GameObject player
+        
     public int maxHealth = 100;
     public int currentHealth;
     public Image healthBar; // HPバーのImageコンポーネントを参照
@@ -47,16 +49,28 @@ public class PlayerHealth : MonoBehaviour
         healthBar.fillAmount = (float)currentHealth / maxHealth;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            TakeDamage(10);
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            TakeDamage(40);
+        }
+    }
+
     //public double Jump()
     //{
-        //position1
-        //janp
-        //着地判定if文？
-        //posisiton2
+    //position1
+    //janp
+    //着地判定if文？
+    //posisiton2
 
-        //po2-po1(結果を変数に入れる
+    //po2-po1(結果を変数に入れる
 
-        //落下//マイナス検知if文
+    //落下//マイナス検知if文
 
 
     //}

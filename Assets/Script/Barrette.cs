@@ -22,7 +22,7 @@ public class barrette : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Zerima" && collision.gameObject.tag != "Player" && collision.gameObject.tag != "Shot")
+        if (collision.gameObject.tag != "BackGround" && collision.gameObject.tag != "Zerima" && collision.gameObject.tag != "Player" && collision.gameObject.tag != "Shot")
             Destroy(gameObject);
     }
 

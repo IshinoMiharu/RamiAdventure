@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_movePower: 3
-  m_jumpPower: 6
+  m_jumpPower: 6.5
   m_flipX: 1
   r_object: {fileID: 5392883121688197606, guid: dd3c7e8983f795d4aa48809564af8365, type: 3}
   groundCheck: {fileID: 7116031495784856568}

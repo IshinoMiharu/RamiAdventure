@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// ガンマンのキャラクターを操作するコンポーネント
@@ -14,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] GameObject Zerima;
     [SerializeField] GameObject RidePoint;
     [SerializeField] GameObject ExetPoint;
-
+    public bool hasKey = false;
     Rigidbody2D m_rb = default;
     SpriteRenderer m_sprite = default;
     /// <summary>m_colors に使う添字</summary>
@@ -140,6 +141,22 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Jump", false);
         }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            ReloadScene();
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            ReloadScene();
+        }
+        if (collision.gameObject.tag == "Toge")
+        {
+            ReloadScene();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -151,6 +168,31 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    public void ReloadScene()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Stage1")
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Stage1");
+        }
+        else if (currentSceneName == "Stage2")
+        {
+            SceneManager.LoadScene("Stage2");
+            Time.timeScale = 1f;
+        }
+        else if (currentSceneName == "Stage3")
+        {
+            SceneManager.LoadScene("Stage3");
+            Time.timeScale = 1f;
+        }
+        else if (currentSceneName == "Stage4")
+        {
+            SceneManager.LoadScene("Stage4");
+            Time.timeScale = 1f;
+        }
+    }
     //private void OnTriggerStay2D(Collider2D other)
     //{
     //    if (Input.GetKeyDown(KeyCode.UpArrow) && inZerima == true)

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_movePower: 3
   m_jumpPower: 4
   m_flipX: 1
-  Zerima: {fileID: 167894552758094120, guid: ce0638e6a84486d48848419c20fb67fd, type: 3}
+  Zerima: {fileID: 0}
   RidePoint: {fileID: 4869739344114849650}
   ExetPoint: {fileID: 2363924156472771858}
   muki: 0
@@ -376,7 +376,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.11, y: 1}
-  m_EdgeRadius: 0.08
+  m_EdgeRadius: 0.03
 --- !u!1 &4869739344114849650
 GameObject:
   m_ObjectHideFlags: 0

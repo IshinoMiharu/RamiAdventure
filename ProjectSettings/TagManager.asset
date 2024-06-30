@@ -6,8 +6,15 @@ TagManager:
   tags:
   - Ground
   - Zerima
-  - Shot
   - enemy
+  - BackGround
+  - Toge
+  - Boss
+  - Barrette
+  - BGM
+  - PauseCanvas
+  - ScoreManager
+  - DroppableObject
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - UI
   - Ground
   - Zerima
-  - 
+  - ZerimaGround
   - 
   - 
   - 

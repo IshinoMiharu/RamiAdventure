@@ -111,10 +111,22 @@ public class EnemyChasePlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "barrette")
+        if (collision.gameObject.tag == "Barrette")
         {
 
             TakeDamage(1);
+        }
+
+        if (collision.gameObject.tag == "Toge")
+        {
+
+            TakeDamage(1);
+        }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+
+            Destroy(gameObject);
         }
     }
 

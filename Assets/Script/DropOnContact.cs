@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class DropOnContact : MonoBehaviour
+{
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Boss")
+        {
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                // freeze positionÇâèú
+                rb.constraints = RigidbodyConstraints2D.None;
+
+            }
+
+
+        }
+
+    }
+}
