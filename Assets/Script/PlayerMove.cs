@@ -108,7 +108,7 @@ public class PlayerMove : MonoBehaviour
             FlipX(m_h);
         }
 
-        if(inZerima&& Input.GetKeyUp(KeyCode.RightShift))
+        if(inZerima&& Input.GetKeyUp(KeyCode.DownArrow))
         {
             Zerima.transform.parent = this.transform;
             Zerima.GetComponent<Rigidbody2D>().simulated = false;
@@ -116,7 +116,7 @@ public class PlayerMove : MonoBehaviour
             _isrideZerima = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightShift) && _isrideZerima == true)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && _isrideZerima == true)
         {
             Debug.Log("êeéqâè¡ÅI");
             _isrideZerima = false;
