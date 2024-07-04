@@ -6090,6 +6090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteHorse (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
       value: 
@@ -13065,6 +13069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteHorse (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
       value: 
@@ -18068,6 +18076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteHorse (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
       value: 
@@ -22157,6 +22169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteHorse (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
       value: 
@@ -22918,6 +22934,10 @@ PrefabInstance:
     - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: m_Name
       value: WhiteHorse (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
@@ -38849,6 +38869,10 @@ PrefabInstance:
     - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: m_Name
       value: WhiteHorse
+      objectReference: {fileID: 0}
+    - target: {fileID: 992044857603275924, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4879218571746469244, guid: 31855e91e858a2c469ea2c47154aa6ac, type: 3}
       propertyPath: player
