@@ -3395,6 +3395,10 @@ PrefabInstance:
       propertyPath: coinID
       value: d
       objectReference: {fileID: 0}
+    - target: {fileID: 4936581278780566036, guid: cedf3cd48b384d4459094b2ef9b72412, type: 3}
+      propertyPath: _whenActivated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5110457128520162159, guid: cedf3cd48b384d4459094b2ef9b72412, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -13315,6 +13319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff2ad0b9842f1647961eb47972caca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sound: {fileID: 0}
+  _whenActivated: 1
 --- !u!61 &945716841
 BoxCollider2D:
   m_ObjectHideFlags: 0

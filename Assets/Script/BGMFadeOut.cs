@@ -13,8 +13,11 @@ public class BGMFadeOut : MonoBehaviour
         if (other.CompareTag("Player") && !isFading)
         {
             StartCoroutine(FadeOutBGM());
+            //プレイヤーが触れたときFadeOutBGM()を実行する
+            //StartCoroutine()とは
         }
     }
+
 
     IEnumerator FadeOutBGM()
     {

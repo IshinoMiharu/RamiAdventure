@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MiheiruCoin : MonoBehaviour
+public class MiheiruCoin : ItemBase
 {
     public int coinValue = 1;
     public string coinID;
@@ -13,14 +13,9 @@ public class MiheiruCoin : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+
+    public override void Activate()
     {
-        if (other.CompareTag("Player"))
-        {
-            // スコアを追加
-            ScoreManager.instance.AddScore(coinValue, coinID);
-            // コインを破壊
-            Destroy(gameObject);
-        }
+        ScoreManager.instance.AddScore(coinValue, coinID);
     }
 }

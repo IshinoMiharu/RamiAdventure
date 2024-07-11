@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key : ItemBase
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public override void Activate()
     {
-        if (other.CompareTag("Player"))
-        {
-            // プレイヤーがカギを取得
-            other.GetComponent<PlayerMove>().hasKey = true;
-
-            // カギのオブジェクトを破壊
-            Destroy(gameObject);
-        }
+        GetComponent<PlayerMove>().hasKey = true;
     }
+
 }

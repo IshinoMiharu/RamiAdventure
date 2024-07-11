@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// ガンマンのキャラクターを操作するコンポーネント
+/// ラミィを操作するコンポーネント
 /// </summary>
 public class PlayerMove : MonoBehaviour
 {
@@ -26,14 +27,15 @@ public class PlayerMove : MonoBehaviour
     float m_scaleX;
     /// <summary>最初に出現した座標</summary>
     //Rigidbody2D _p_move = default;
-    Vector3 m_initialPosition;
+    //Vector3 m_initialPosition;
 
     public bool muki = false;
     public Transform groundCheck;   // 接地を検知するためのオブジェクト
     public LayerMask groundLayer;   // 地面と判定するレイヤー
     Animator animator;
+    List<ItemBase> _itemList = new List<ItemBase>();
 
-    private Rigidbody2D rb;
+    //private Rigidbody2D rb;
 
     bool isGrounded = false;
     bool inZerima = false;
@@ -54,7 +56,18 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-
+        // アイテムを使う
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (_itemList.Count > 0)
+            {
+                // リストの先頭にあるアイテムを使って、破棄する
+                ItemBase item = _itemList[0];
+                _itemList.RemoveAt(0);
+                item.Activate();
+                Destroy(item.gameObject);
+            }
+        }
         // 各種入力を受け取る
         // 接地しているかどうかを検知
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
@@ -129,7 +142,10 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-
+    public void GetItem(ItemBase item)
+    {
+        _itemList.Add(item);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -5,25 +5,12 @@ using UnityEngine;
 
 public class barrette : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "BackGround" && collision.gameObject.tag != "Zerima" && collision.gameObject.tag != "Player" && collision.gameObject.tag != "Shot")
             Destroy(gameObject);
+        //このゲームオブジェクトが背景やプレイヤー以外のTriggerに接触したとき破壊される。
     }
 
 }
