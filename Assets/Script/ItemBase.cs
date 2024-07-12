@@ -11,8 +11,8 @@ public abstract class ItemBase : MonoBehaviour
     [Tooltip("アイテムを取った時に鳴らす効果音")]
     [SerializeField] AudioClip _sound = default;
     /// <summary>アイテムの効果をいつ発揮するか</summary>
-    [Tooltip("Get を選ぶと、取った時に効果が発動する。Use を選ぶと、アイテムを使った時に発動する")]
-    [SerializeField] ActivateTiming _whenActivated = ActivateTiming.Get;
+    [Tooltip("trueだとラミィが取った時に効果が発動する。falsだとゼリーマがとった時に発動する")]
+    [SerializeField] bool UsePlayer = true;
     //   [SerializeField] GameObject Player;
     //private PlatformerPlayerController2D Playerbuh;
     /// <summary>
@@ -26,39 +26,34 @@ public abstract class ItemBase : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("Player") && UsePlayer)
         {
             if (_sound)
             {
                 AudioSource.PlayClipAtPoint(_sound, Camera.main.transform.position);
             }
 
-            // アイテム発動タイミングによって処理を分ける
-            if (_whenActivated == ActivateTiming.Get)
+            if (UsePlayer)
             {
                 Activate();
                 Destroy(this.gameObject);
             }
-            else if (_whenActivated == ActivateTiming.Use)
+
+        }
+        if (collision.gameObject.tag.Equals("Zerima") && !UsePlayer)
+        {
+            if (_sound)
             {
-                // 見えない所に移動する
-                this.transform.position = Camera.main.transform.position;
-                // コライダーを無効にする
-                GetComponent<Collider2D>().enabled = false;
-                // プレイヤーにアイテムを渡す
-                collision.gameObject.GetComponent<PlayerMove>().GetItem(this);
+                AudioSource.PlayClipAtPoint(_sound, Camera.main.transform.position);
+            }
+
+            else if (!UsePlayer)
+            {
+                Activate();
+                Destroy(this.gameObject);
             }
         }
     }
 
-    /// <summary>
-    /// アイテムをいつアクティベートするか
-    /// </summary>
-    enum ActivateTiming
-    {
-        /// <summary>取った時にすぐ使う</summary>
-        Get,
-        /// <summary>「使う」コマンドで使う</summary>
-        Use,
-    }
+
 }

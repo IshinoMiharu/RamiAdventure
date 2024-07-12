@@ -142,6 +142,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+
     public void GetItem(ItemBase item)
     {
         _itemList.Add(item);
@@ -209,20 +210,7 @@ public class PlayerMove : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (Input.GetKeyDown(KeyCode.UpArrow) && inZerima == true)
-    //    {
-    //        Debug.Log("親子解消！");
 
-    //        Zerima.GetComponent<Rigidbody2D>().simulated = true;
-    //        GameObject.Find("Zerima").transform.parent = null;
-    //        Zerima.GetComponent<Rigidbody2D>().AddForce(Vector2.up * m_jumpPower, ForceMode2D.Impulse);
-    //        Zerima.transform.position = RidePoint.transform.position;
-    //        inZerima = false;
-    //    }
-    //   // Debug.Log(inZerima);
-    //}
 
     /// <summary>
     /// 左右を反転させる

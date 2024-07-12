@@ -111,6 +111,10 @@ public class ZerimaMove : MonoBehaviour
         }
     }
 
+    public void Move(float move)
+    {
+        m_movePower += move;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
