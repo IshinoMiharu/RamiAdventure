@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ExerciseScene2.unity
+    guid: 692aafa4103e54447bc0d8bccdf14269
+  - enabled: 1
+    path: Assets/Scenes/ExerciseScene.unity
+    guid: 22f23085f2fffe44d81c64590cc54451
   m_configObjects: {}

@@ -14,7 +14,7 @@ void Start()
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetComponent<PlayerMove>().hasKey)
+        if (other.CompareTag("Player"))// && other.GetComponent<PlayerMove>().hasKey)
         {
             SceneManager.LoadScene(sceneName);
         }
